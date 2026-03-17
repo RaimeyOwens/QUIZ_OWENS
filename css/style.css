@@ -3,4 +3,14 @@
     color: white;
     border-color: #007bff;
 }
+
+h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+    font-size: 100px;
+    text-shadow: 2px 2px goldenrod;
+}
+
+.description{
+    font-size: 60px;
+}
   
