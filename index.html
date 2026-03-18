@@ -14,7 +14,7 @@
     <h1 class="text-center mt-4">Career Type Quiz</h1>
     <br>
     <p class="text-center" id="description">Take this quiz to find out what career type you are most like! Options you can get: Analytical, Creative, People-Oriented, or Practical (Hands-on).</p>
-    <!--IMPORTANT KEY: Analytical:'A'   Hands-on:'H'   People-Oriented:'P'  Creative:'C'-->
+    <!--IMPORTANT KEY: Analytical:'A = 1'  People-Oriented:'P = 2'    Hands-on:'H = 3'  Creative:'C = 4'-->
     <!--I created data-type to keep track of these characters which is important for the results section-->
     <br>
     <hr>
@@ -24,16 +24,16 @@
         <h4 class="mb-3">Question 1: What Hobby Do You Enjoy The Most?</h4>
         <div class="row g-2">
           <div class="col-6">
-            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="A" data-type="P">Reading/Writing</button> <!--P-->
+            <button class="btn btn-outline-primary w-100 answer-btn" data-points="2" data-type="P">Reading/Writing</button> <!--P-->
           </div>
           <div class="col-6">
-            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="B" data-type="H">Playing Sports</button> <!--H-->
+            <button class="btn btn-outline-primary w-100 answer-btn" data-points="3" data-type="H">Playing Sports</button> <!--H-->
           </div>
           <div class="col-6">
-            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="C" data-type="C">Painting</button> <!--C-->
+            <button class="btn btn-outline-primary w-100 answer-btn" data-points="4" data-type="C">Painting</button> <!--C-->
           </div>
           <div class="col-6">
-            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="D" data-type="A">Playing Videogames</button> <!--A-->
+            <button class="btn btn-outline-primary w-100 answer-btn" data-points="1" data-type="A">Playing Videogames</button> <!--A-->
           </div>
         </div>
       </div>
@@ -47,16 +47,16 @@
         <h4 class="mb-3">Question 2: What TV Genre Would You Most Likely Watch?</h4>
         <div class="row g-2">
           <div class="col-6">
-            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="A" data-type="P">Reality</button> <!--P-->
+            <button class="btn btn-outline-primary w-100 answer-btn" data-points="2" data-type="P">Reality</button> <!--P-->
           </div>
           <div class="col-6">
-            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="B" data-type="A">Documentaries</button> <!--A-->
+            <button class="btn btn-outline-primary w-100 answer-btn" data-points="1" data-type="A">Documentaries</button> <!--A-->
           </div>
           <div class="col-6">
-            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="C" data-type="H">Sci-Fi</button> <!--H-->
+            <button class="btn btn-outline-primary w-100 answer-btn" data-points="3" data-type="H">Sci-Fi</button> <!--H-->
           </div>
           <div class="col-6">
-            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="D" data-type="C">Comedy</button> <!--C-->
+            <button class="btn btn-outline-primary w-100 answer-btn" data-points="4" data-type="C">Comedy</button> <!--C-->
           </div>
         </div>
       </div>
@@ -69,16 +69,16 @@
         <h4 class="mb-3">Question 3: What School Subject Do You Prefer?</h4>
         <div class="row g-2">
           <div class="col-6">
-            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="A" data-type="A">Math</button> <!--A-->
+            <button class="btn btn-outline-primary w-100 answer-btn" data-points="1" data-type="A">Math</button> <!--A-->
           </div>
           <div class="col-6">
-            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="B" data-type="C">Art</button> <!--C-->
+            <button class="btn btn-outline-primary w-100 answer-btn" data-points="4" data-type="C">Art</button> <!--C-->
           </div>
           <div class="col-6">
-            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="C" data-type="H">Physical Education</button> <!--H-->
+            <button class="btn btn-outline-primary w-100 answer-btn" data-points="3" data-type="H">Physical Education</button> <!--H-->
           </div>
           <div class="col-6">
-            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="D" data-type="P">History</button> <!--P-->
+            <button class="btn btn-outline-primary w-100 answer-btn" data-points="2" data-type="P">History</button> <!--P-->
           </div>
         </div>
       </div>
@@ -91,16 +91,16 @@
         <h4 class="mb-3">Question 4: What Kind Of Work Environment Do You Want?</h4>
         <div class="row g-2">
           <div class="col-6">
-            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="A" data-type="C">Creative And Flexible</button> <!--C-->
+            <button class="btn btn-outline-primary w-100 answer-btn" data-points="4" data-type="C">Creative And Flexible</button> <!--C-->
           </div>
           <div class="col-6">
-            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="B" data-type="P">Fast-Paced With Constant Change</button> <!--P-->
+            <button class="btn btn-outline-primary w-100 answer-btn" data-points="2" data-type="P">Fast-Paced With Constant Change</button> <!--P-->
           </div>
           <div class="col-6">
-            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="C" data-type="A">Calm and Structured</button><!--A-->
+            <button class="btn btn-outline-primary w-100 answer-btn" data-points="1" data-type="A">Calm and Structured</button><!--A-->
           </div>
           <div class="col-6">
-            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="D" data-type="H">Outdoors and Hands-on</button> <!--H-->
+            <button class="btn btn-outline-primary w-100 answer-btn" data-points="3" data-type="H">Outdoors and Hands-on</button> <!--H-->
           </div>
         </div>
       </div>
@@ -113,16 +113,16 @@
         <h4 class="mb-3">Question 5: What Kind Of Problems Do You Like Solving?</h4>
         <div class="row g-2">
           <div class="col-6">
-            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="A" data-type="A">Logical Puzzles Or Number Problems</button> <!--A-->
+            <button class="btn btn-outline-primary w-100 answer-btn" data-points="1" data-type="A">Logical Puzzles Or Number Problems</button> <!--A-->
           </div>
           <div class="col-6">
-            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="B" data-type="C">Designing Something New</button><!--C-->
+            <button class="btn btn-outline-primary w-100 answer-btn" data-points="4" data-type="C">Designing Something New</button><!--C-->
           </div>
           <div class="col-6">
-            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="C" data-type="P">Helping People And Giving Advice</button> <!--P-->
+            <button class="btn btn-outline-primary w-100 answer-btn" data-points="2" data-type="P">Helping People And Giving Advice</button> <!--P-->
           </div>
           <div class="col-6">
-            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="D" data-type="H">Practical, Real-World Task</button><!--H-->
+            <button class="btn btn-outline-primary w-100 answer-btn" data-points="3" data-type="H">Practical, Real-World Task</button><!--H-->
           </div>
         </div>
       </div>

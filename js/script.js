@@ -1,39 +1,58 @@
 console.log("script.js connected!");
-
+/**
+ * 
+ * I decided to do the point system this way
+ * Points    Type
+ * 4-6    =   A
+ * 7-9    =   P 
+ * 10-12  =   H 
+ * 13-16  =   C
+ * 
+ */
 document.addEventListener("DOMContentLoaded", function(){ //Make sure the page is loaded fully before using any JavaScript
-    let scores = {
-        A: 0,
-        C: 0,
-        P: 0,
-        H: 0 
-    };
+    let selectedPoints = {};
 
     //Tracking the clicks
-    document.querySelectorAll(".answer-btn").forEach(button => {
-        button.addEventListener("click", function() {
-            const type = this.dataset.type;
-            scores[type]++;
-            //Shows the visually marked selection once the user clicks it
-            this.classList.remove("btn-outline-primary");
-            this.classList.add("btn-primary");
+    document.querySelectorAll(".question-block").forEach((question, index) => {
+    question.querySelectorAll(".answer-btn").forEach((button) => {
+      button.addEventListener("click", function () {
+        // Removes the highlight from other answers
+        question.querySelectorAll(".answer-btn").forEach((b) => {
+          b.classList.remove("btn-primary");
+          b.classList.add("btn-outline-primary");
         });
+
+        // Highlights the selected answer
+        this.classList.remove("btn-outline-primary");
+        this.classList.add("btn-primary");
+
+        // Stores the points for this question
+        selectedPoints[index] = parseInt(this.dataset.points);
+      });
     });
+  });
 
-    document.getElementById("show-result").addEventListener("click", function() {
+    function displayResult() {
+        // Sum all selected points
+        const totalPoints = Object.values(selectedPoints).reduce(
+        (sum, val) => sum + val,
+        0
+        );
 
-        let highest = Object.keys(scores).reduce((a, b) => //Compares all of the career type scores and decides which one is greatest
-            scores[a] > scores[b] ? a : b);
-
+        // Determine career type based on total points
         let resultText = "";
-        //results displayed
-        if (highest === "A") resultText = "Congrats! You are Analytical";
-        if (highest === "C") resultText = "Congrats! You are Creative";
-        if (highest === "P") resultText = "Congrats! You are People-Oriented";
-        if (highest === "H") resultText = "Congrats! You are Practical/Hands-on";
-    
+        if (totalPoints >= 4 && totalPoints <= 6) resultText = "Congrats! You are Analytical";
+        else if (totalPoints >= 7 && totalPoints <= 9) resultText = "Congrats! You are People-Oriented";
+        else if (totalPoints >= 10 && totalPoints <= 12) resultText = "Congrats! You are Practical / Hands-On";
+        else if (totalPoints >= 13 && totalPoints <= 16) resultText = "Congrats! You are Creative";
 
-        document.getElementById("result-text").textContent = resultText;
-        document.getElementById("result-container").style.display = "block";
-    });
+        // Display the result
+        const resultContainer = document.getElementById("result-container");
+        const resultTextElement = document.getElementById("result-text");
+        resultTextElement.textContent = resultText;
+        resultContainer.style.display = "block";
+    }
 
+        // The click listener to "Show Results" button
+        document.getElementById("show-result").addEventListener("click", displayResult);
 });
