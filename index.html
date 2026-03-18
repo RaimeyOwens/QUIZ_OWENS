@@ -8,11 +8,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <link rel="stylesheet" href ="./css/style.css">
     <script src="./js/script.js"></script>
+
 </head>
 <body>
     <h1 class="text-center mt-4">Career Type Quiz</h1>
     <br>
-    <p class="text-center id="description">Take this quiz to find out what career type you are most like! Options you can get: Analytical, Creative, People-Oriented, or Practical.</p>
+    <p class="text-center" id="description">Take this quiz to find out what career type you are most like! Options you can get: Analytical, Creative, People-Oriented, or Practical (Hands-on).</p>
+    <!--IMPORTANT KEY: Analytical:'A'   Hands-on:'H'   People-Oriented:'P'  Creative:'C'-->
+    <!--I created data-type to keep track of these characters which is important for the results section-->
     <br>
     <hr>
     <!-- Start quiz element- Question 1-->
@@ -21,16 +24,16 @@
         <h4 class="mb-3">Question 1: What Hobby Do You Enjoy The Most?</h4>
         <div class="row g-2">
           <div class="col-6">
-            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="A">Reading/Writing</button>
+            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="A" data-type="P">Reading/Writing</button> <!--P-->
           </div>
           <div class="col-6">
-            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="B">Playing Sports</button>
+            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="B" data-type="H">Playing Sports</button> <!--H-->
           </div>
           <div class="col-6">
-            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="C">Painting</button>
+            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="C" data-type="C">Painting</button> <!--C-->
           </div>
           <div class="col-6">
-            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="D">Playing Videogames</button>
+            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="D" data-type="A">Playing Videogames</button> <!--A-->
           </div>
         </div>
       </div>
@@ -39,21 +42,21 @@
 
 
     <!-- Question 2 -->
-    <div class="container d-flex justify-content-center" id="question-1">
+    <div class="container d-flex justify-content-center" id="question-2">
       <div class="card my-4 p-4 question-block" style="width: 75%;">
         <h4 class="mb-3">Question 2: What TV Genre Would You Most Likely Watch?</h4>
         <div class="row g-2">
           <div class="col-6">
-            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="A">Reality</button>
+            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="A" data-type="P">Reality</button> <!--P-->
           </div>
           <div class="col-6">
-            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="B">Documentaries</button>
+            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="B" data-type="A">Documentaries</button> <!--A-->
           </div>
           <div class="col-6">
-            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="C">Comedy</button>
+            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="C" data-type="H">Sci-Fi</button> <!--H-->
           </div>
           <div class="col-6">
-            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="D">Sci-Fi</button>
+            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="D" data-type="C">Comedy</button> <!--C-->
           </div>
         </div>
       </div>
@@ -61,21 +64,21 @@
 
 
     <!-- Question 3-->
-    <div class="container d-flex justify-content-center" id="question-2">
+    <div class="container d-flex justify-content-center" id="question-3">
       <div class="card my-4 p-4 question-block" style="width: 75%;">
         <h4 class="mb-3">Question 3: What School Subject Do You Prefer?</h4>
         <div class="row g-2">
           <div class="col-6">
-            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="A">Math</button>
+            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="A" data-type="A">Math</button> <!--A-->
           </div>
           <div class="col-6">
-            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="B">Science</button>
+            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="B" data-type="C">Art</button> <!--C-->
           </div>
           <div class="col-6">
-            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="C">Art</button>
+            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="C" data-type="H">Physical Education</button> <!--H-->
           </div>
           <div class="col-6">
-            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="D">History</button>
+            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="D" data-type="P">History</button> <!--P-->
           </div>
         </div>
       </div>
@@ -83,21 +86,21 @@
 
 
     <!-- Question 4 -->
-    <div class="container d-flex justify-content-center" id="question-3">
+    <div class="container d-flex justify-content-center" id="question-4">
       <div class="card my-4 p-4 question-block" style="width: 75%;">
-        <h4 class="mb-3">Question 4: What Kind Of Work Enviornment Do You Want?</h4>
+        <h4 class="mb-3">Question 4: What Kind Of Work Environment Do You Want?</h4>
         <div class="row g-2">
           <div class="col-6">
-            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="A">Calm and Structured</button>
+            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="A" data-type="C">Creative And Flexible</button> <!--C-->
           </div>
           <div class="col-6">
-            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="B">Fast-Paced With Constant Change</button>
+            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="B" data-type="P">Fast-Paced With Constant Change</button> <!--P-->
           </div>
           <div class="col-6">
-            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="C">Creative And Flexible</button>
+            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="C" data-type="A">Calm and Structured</button><!--A-->
           </div>
           <div class="col-6">
-            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="D">Outdoors and Hands-on</button>
+            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="D" data-type="H">Outdoors and Hands-on</button> <!--H-->
           </div>
         </div>
       </div>
@@ -105,21 +108,21 @@
 
 
     <!-- Question 5 -->
-    <div class="container d-flex justify-content-center" id="question-1">
+    <div class="container d-flex justify-content-center" id="question-5">
       <div class="card my-4 p-4 question-block" style="width: 75%;">
         <h4 class="mb-3">Question 5: What Kind Of Problems Do You Like Solving?</h4>
         <div class="row g-2">
           <div class="col-6">
-            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="A">Logical Puzzles Or Number Problems</button>
+            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="A" data-type="A">Logical Puzzles Or Number Problems</button> <!--A-->
           </div>
           <div class="col-6">
-            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="B">Helping People And Giving Advice</button>
+            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="B" data-type="C">Designing Something New</button><!--C-->
           </div>
           <div class="col-6">
-            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="C">Designing And Creating Something New</button>
+            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="C" data-type="P">Helping People And Giving Advice</button> <!--P-->
           </div>
           <div class="col-6">
-            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="D">Pratical, Real-World Task</button>
+            <button class="btn btn-outline-primary w-100 answer-btn" data-answer="D" data-type="H">Practical, Real-World Task</button><!--H-->
           </div>
         </div>
       </div>
@@ -129,22 +132,17 @@
     
     <!-- End quiz element -->
 
-    <!-- Add more quiz elements here -->
-
-
 
     <div class="container d-flex justify-content-center">
-      <button id="show-result" class="btn btn-success my-4">Show Results</button>
+      <button id="show-result" class="btn my-4 custom-button">Show Results</button>
     </div>    
     <!-- Output the result here -->
     <div class="container d-flex justify-content-center">
-      <div id="result-container" class="card p-4 mb-4" style="width: 75%; display: none;">
+      <div id="result-container" class="card p-4 mb-4 text-center" style="width: 75%; display: none;">
         <h3>Your Result:</h3>
         <p id="result-text"></p>
       </div>
     </div>
-    
-    <!-- Connect to your script file here -->
-     <script src = "./js/script.js"></script>
+
 </body>
 </html>

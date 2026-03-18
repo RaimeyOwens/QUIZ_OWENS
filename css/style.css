@@ -7,10 +7,23 @@
 h1{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
     font-size: 100px;
-    text-shadow: 2px 2px goldenrod;
+    text-shadow: 2px 2px rgb(242, 69, 199);
 }
 
 .description{
     font-size: 60px;
+}
+
+body{
+    background-image: linear-gradient(to bottom, rgb(255, 255, 255),rgb(246, 197, 234), rgb(242, 69, 199));
+}
+
+.custom-button{
+    color:rgb(242, 69, 199);
+    background-color: white;
+}
+.custom-button:hover{
+    color:rgb(242, 69, 199);
+    background-color: rgb(182, 182, 182);
 }
   
